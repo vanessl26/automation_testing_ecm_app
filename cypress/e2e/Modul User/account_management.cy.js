@@ -1,5 +1,6 @@
 describe('Account Management', () => {
   it('Validating Login Page', () => {
+    cy.viewport(1920, 1080)
     cy.visit('http://127.0.0.1:8000/login')
     //Validating objects needed for loging in
     cy.get('#email').should('exist')
@@ -9,10 +10,11 @@ describe('Account Management', () => {
     cy.get(':nth-child(3) > .small > .text-light').should('exist')
   })
 
-  it.only('Add Account', ()=>{
+  it('Add Account', ()=>{
+    cy.viewport(1920, 1080)
     cy.visit('http://127.0.0.1:8000/login')
-    cy.get('#email').type('vanessa.angelica@student.umn.ac.id')
-    cy.get('#password').type('12345')
+    cy.get('#email').type('akimichi4455@gmail.com')
+    cy.get('#password').type('kokila123')
     cy.get(':nth-child(2) > form > .btn').click()
     cy.url().should('be.equal', 'http://127.0.0.1:8000/admin')
     cy.get('.col-md-4 > .btn').click()
@@ -22,13 +24,14 @@ describe('Account Management', () => {
     cy.get(':nth-child(4) > .form-select').select('User')
     cy.get(':nth-child(5) > .form-control').type('User12345')
     cy.get('.modal-footer > .btn-primary').click()
+    cy.contains('success').should('exist')
   })
 
   it('Add account but full name empty', ()=>{
     cy.viewport(1920, 1080)
     cy.visit('http://127.0.0.1:8000/login')
-    cy.get('#email').type('vanessa.angelica@student.umn.ac.id')
-    cy.get('#password').type('12345')
+    cy.get('#email').type('akimichi4455@gmail.com')
+    cy.get('#password').type('kokila123')
     cy.get(':nth-child(2) > form > .btn').click()
     cy.url().should('be.equal', 'http://127.0.0.1:8000/admin')
     cy.get('.col-md-4 > .btn').click()
@@ -44,8 +47,8 @@ describe('Account Management', () => {
   it('Add account but email empty', ()=>{
     cy.viewport(1920, 1080)
     cy.visit('http://127.0.0.1:8000/login')
-    cy.get('#email').type('vanessa.angelica@student.umn.ac.id')
-    cy.get('#password').type('12345')
+    cy.get('#email').type('akimichi4455@gmail.com')
+    cy.get('#password').type('kokila123')
     cy.get(':nth-child(2) > form > .btn').click()
     cy.url().should('be.equal', 'http://127.0.0.1:8000/admin')
     cy.get('.col-md-4 > .btn').click()

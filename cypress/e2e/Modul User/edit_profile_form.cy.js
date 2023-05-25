@@ -2,8 +2,8 @@ describe('Edit Profile Form (User) Test Case', () => {
     it('Update fullname', () => {
       cy.viewport(1920, 1080)
       cy.visit('http://127.0.0.1:8000/login')
-      cy.get('#email').type('vanessa.angelica@student.umn.ac.id')
-      cy.get('#password').type('12345')
+      cy.get('#email').type('limfort01@gmail.com')
+      cy.get('#password').type('kokila123')
       cy.get(':nth-child(2) > form > .btn').click()
       cy.url().should('be.equal', 'http://127.0.0.1:8000/home')
       cy.get(':nth-child(4) > a > .btn').click()
@@ -16,8 +16,8 @@ describe('Edit Profile Form (User) Test Case', () => {
     it('Empty fullname', () => {
       cy.viewport(1920, 1080)
       cy.visit('http://127.0.0.1:8000/login')
-      cy.get('#email').type('vanessa.angelica@student.umn.ac.id')
-      cy.get('#password').type('12345')
+      cy.get('#email').type('limfort01@gmail.com')
+      cy.get('#password').type('kokila123')
       cy.get(':nth-child(2) > form > .btn').click()
       cy.url().should('be.equal', 'http://127.0.0.1:8000/home')
       cy.get(':nth-child(4) > a > .btn').click()
