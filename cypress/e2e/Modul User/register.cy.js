@@ -1,14 +1,14 @@
 describe('Register Test Cases', () => {
     it('Validating Register Page', () => {
-      cy.visit('http://127.0.0.1:8000/register')
-      //Validating objects needed for forgot password
-      cy.get(':nth-child(1) > .form-control').should('exist')
-      cy.get('.form-group > :nth-child(2) > .form-control').should('exist')
-      cy.get(':nth-child(3) > .form-control').should('exist')
-      cy.get('#exampleFormControlTextarea1').should('exist')
-      cy.get(':nth-child(5) > .form-control').should('exist')
-      cy.get('.col > .btn').should('exist')
-      cy.get('.small > .text-light').should('exist')
+        cy.visit('http://127.0.0.1:8000/register')
+        //Validating objects needed for forgot password
+        cy.get(':nth-child(1) > .form-control').should('exist')
+        cy.get('.form-group > :nth-child(2) > .form-control').should('exist')
+        cy.get(':nth-child(3) > .form-control').should('exist')
+        cy.get('#exampleFormControlTextarea1').should('exist')
+        cy.get(':nth-child(5) > .form-control').should('exist')
+        cy.get('.col > .btn').should('exist')
+        cy.get('.small > .text-light').should('exist')
     })
     
     it('All field valid', () => {

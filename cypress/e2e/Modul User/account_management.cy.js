@@ -19,7 +19,7 @@ describe('Account Management', () => {
     cy.url().should('be.equal', 'http://127.0.0.1:8000/admin')
     cy.get('.col-md-4 > .btn').click()
     cy.get('.form-group > :nth-child(1) > .form-control').type('User 13').wait(500)
-    cy.get(':nth-child(2) > .form-control').type('user13@gmail.com') //email should not exist in database
+    cy.get(':nth-child(2) > .form-control').type('user100@gmail.com') //email should not exist in database
     cy.get(':nth-child(3) > .form-control').type('123')
     cy.get(':nth-child(4) > .form-select').select('User')
     cy.get(':nth-child(5) > .form-control').type('User12345')

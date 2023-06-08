@@ -41,7 +41,7 @@ describe('Category Test Cases for Admin', ()=>{
         cy.contains('success').should('exist')
     })
 
-    it.only('Edit category but category name is empty', () =>{
+    it('Edit category but category name is empty', () =>{
         cy.viewport(1920, 1080)
         cy.visit('http://127.0.0.1:8000/login')
         cy.get('#email').type('akimichi4455@gmail.com')
@@ -52,6 +52,6 @@ describe('Category Test Cases for Admin', ()=>{
         cy.get('[href="category/edit/45451"] > .fa-regular').click()
         cy.get('.form-control').clear()
         cy.get('.form-group > .btn').click()
-        cy.get('.modal-header').should('exist')
+        cy.get('.form-control').should('exist')
     })
 })

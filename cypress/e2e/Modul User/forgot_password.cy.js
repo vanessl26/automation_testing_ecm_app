@@ -1,10 +1,10 @@
 describe('Forgot Password Test Cases', () => {
     it('Validating Login Page', () => {
         cy.viewport(1920, 1080)
-      cy.visit('http://127.0.0.1:8000/forgot_password')
-      //Validating objects needed for forgot password
-      cy.get(':nth-child(3) > .form-control').should('exist')
-      cy.get(':nth-child(5) > .btn').should('exist')
+        cy.visit('http://127.0.0.1:8000/forgot_password')
+        //Validating objects needed for forgot password
+        cy.get(':nth-child(3) > .form-control').should('exist')
+        cy.get(':nth-child(5) > .btn').should('exist')
     })
     
     it('Email registered in database', ()=>{
